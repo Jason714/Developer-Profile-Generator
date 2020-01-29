@@ -1,12 +1,29 @@
 const fs = require("fs");
 const axios = require("axios");
-const API_KEY = " e8e7d47ec47476fd4b1c64b5b62098f27f7e6969";
+const inquirer = require("inquirer");
+const generateHTML = require("./generateHTML")
 
 
-const questions = [
 
-];
 
+inquirer.prompt([
+    {
+        type: "input",
+        name: "name",
+        message: "What is your github user name?"
+    },
+    {
+        type: "checkbox",
+        message: "Choose a color for your background",
+        name: "color",
+        choices: [
+            "Green",
+            "Blue",
+            "Pink",
+            "Red"
+        ]
+    }
+])
 function writeToFile(fileName, data) {
 
 }
