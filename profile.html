@@ -1,32 +1,4 @@
-const colors = {
-  green: {
-    wrapperBackground: "#E6E1C3",
-    headerBackground: "#C1C72C",
-    headerColor: "black",
-    photoBorderColor: "#black"
-  },
-  blue: {
-    wrapperBackground: "#5f64d3",
-    headerBackground: "#26175A",
-    headerColor: "white",
-    photoBorderColor: "#73448C"
-  },
-  pink: {
-    wrapperBackground: "#879CDF",
-    headerBackground: "#FF8374",
-    headerColor: "white",
-    photoBorderColor: "#FEE24C"
-  },
-  red: {
-    wrapperBackground: "#DE9967",
-    headerBackground: "#870603",
-    headerColor: "white",
-    photoBorderColor: "white"
-  }
-};
-
-function generateHTML(res, stars) {
-  return `<!DOCTYPE html>
+<!DOCTYPE html>
   <html lang="en">
     <head>
       <meta charset="UTF-8" />
@@ -52,7 +24,7 @@ function generateHTML(res, stars) {
         height: 100%;
         }
         .wrapper {
-        background-color: ${colors[res.data.color].wrapperBackground};
+        background-color: #E6E1C3;
         padding-top: 100px;
         }
         body {
@@ -94,8 +66,8 @@ function generateHTML(res, stars) {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        background-color: ${colors[res.data.color].headerBackground};
-        color: ${colors[res.data.color].headerColor};
+        background-color: #C1C72C;
+        color: black;
         padding: 10px;
         width: 95%;
         border-radius: 6px;
@@ -106,7 +78,7 @@ function generateHTML(res, stars) {
         border-radius: 50%;
         object-fit: cover;
         margin-top: -75px;
-        border: 6px solid ${colors[res.data.color].photoBorderColor};
+        border: 6px solid #black;
         box-shadow: rgba(0, 0, 0, 0.3) 4px 1px 20px 4px;
         }
         .photo-header h1, .photo-header h2 {
@@ -147,8 +119,8 @@ function generateHTML(res, stars) {
         .card {
         padding: 20px;
         border-radius: 6px;
-        background-color: ${colors[res.data.color].headerBackground};
-        color: ${colors[res.data.color].headerColor};
+        background-color: #C1C72C;
+        color: black;
         margin: 20px;
         }
         .col {
@@ -171,40 +143,38 @@ function generateHTML(res, stars) {
       <div class="main">
         <div class="wrapper">
           <div class="photo-header">
-            <img src="${res.data.avatar_url}">
-            <h1>Hi! My name is ${res.data.name}!</h1>
+            <img src="https://avatars0.githubusercontent.com/u/54523765?v=4">
+            <h1>Hi! My name is Jason Blake!</h1>
             <div class="links-nav">
-              <a class="nav-link">${res.data.location}</a>
-              <a class="nav-link" href="${res.data.html_url}">GitHub</a>
-              <a class="nav-link" href="${res.data.blog}">Blog</a>
+              <a class="nav-link">null</a>
+              <a class="nav-link" href="https://github.com/Jason714">GitHub</a>
+              <a class="nav-link" href="">Blog</a>
             </div>
           </div>
           <div class="container">
-            <h3 class="bio">${res.data.bio}</h3>
+            <h3 class="bio">null</h3>
             <div class="row">
               <div class="card col">
                 <h3>Public Repositories</h3>
-                <p>${res.data.public_repos}</p>
+                <p>13</p>
               </div>
               <div class="card col">
                 <h3>Followers</h3>
-                <p>${res.data.followers}</p>
+                <p>1</p>
               </div>
             </div>
             <div class="row">
               <div class="card col">
                 <h3>GitHub Stars</h3>
-                <p>${stars.data.length}</p>
+                <p>0</p>
               </div>
               <div class="card col">
                 <h3>Following</h3>
-                <p>${res.data.following}</p>
+                <p>2</p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </body>
-  </html>`
-}
-module.exports = generateHTML
+  </html>
