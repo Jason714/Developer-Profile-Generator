@@ -19,7 +19,7 @@
   "homepage": "https://github.com/Jason714/Developer-Profile-Generator#readme",
   "dependencies": {
     "axios": "^0.19.2",
-    "electron": "^7.1.11",
+    "electron": "^5.0.12",
     "electron-html-to": "^2.6.0",
     "inquirer": "^7.0.3"
   },
